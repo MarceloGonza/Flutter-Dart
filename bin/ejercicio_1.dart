@@ -1,3 +1,5 @@
+import 'dart:io';
+
 void main(List<String> arguments) {
   //print('Hello world: ${ejercicio_1.calculate()}!');
   /*
@@ -12,7 +14,8 @@ void main(List<String> arguments) {
     Calcular la edad restando el año de nacimiento al año actual
     Mostrar el resultado en un mensaje como: "Tienes X años"
   */
-  String date = "1995";
+  print("Introduce tu año de nacimiento:");
+  String date = stdin.readLineSync()!;
   int formatDate = int.parse(date);
   int result = (2025 - formatDate);
   print("Tienes $result años");
