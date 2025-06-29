@@ -91,7 +91,7 @@ int experienceYears = 5;
     print("El número es inválido");
   }
 
-  */
+
   print("Introduce el día de la semana:");
   int numberOfTheWeek = int.parse(stdin.readLineSync()!);
 
@@ -115,6 +115,74 @@ int experienceYears = 5;
       break;
     case 7:
       print("Domingo");
+      break;
+    default:
+      print("El número ingresado no es válido");
+  }
+    */
+
+  //EJERCICIO 3: Identificar números positivos y negativos
+  //Objetivo:Objetivo
+  //Escribe un programa en Dart que determine si un número ingresado por el usuariuo es positivo,
+  //negativo o 0.
+
+  /*
+  print("Introduce un número:");
+  int number = int.parse(stdin.readLineSync()!);
+
+  if (number > 0) {
+    print("El número ingrtesado es positivo");
+  } else if (number < 0) {
+    print("El número ingresado es negativo");
+  } else if (number == 0) {
+    print("El número inghresado es cero");
+  } else {
+    print("El número ingresado no es válido");
+  }
+  */
+
+  //EJERCICIO 4: MESES DEL AÑO
+  //Objetivo:
+  //Escribe un programa en Dart que recuba un número entre 1 y 12 y muestre el nombre del mes correspondiente del año.
+  print("Intrpduce un número de 1 al 12 para saber el mes correspondiente:");
+  int monthNumber = int.parse(stdin.readLineSync()!);
+
+  switch (monthNumber) {
+    case 1:
+      print("Enero");
+      break;
+    case 2:
+      print("Febrero");
+      break;
+    case 3:
+      print("Marzo");
+      break;
+    case 4:
+      print("Abril");
+      break;
+    case 5:
+      print("Mayo");
+      break;
+    case 6:
+      print("Junio");
+      break;
+    case 7:
+      print("Julio");
+      break;
+    case 8:
+      print("Agosto");
+      break;
+    case 9:
+      print("Septiembre");
+      break;
+    case 10:
+      print("Octubre");
+      break;
+    case 11:
+      print("Noviembre");
+      break;
+    case 12:
+      print("Diciembre");
       break;
     default:
       print("El número ingresado no es válido");
