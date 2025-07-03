@@ -1,51 +1,58 @@
 import 'dart:io';
 
 void main(List<String> arguments) {
-  //print('Hello world: ${ejercicio_1.calculate()}!');
-  /*
-    EJERCICIO 1: CALCULADORA DE EDAD
-
-    Objetivo:
-    Escribe un programa en Dart que pida al usuario su año de nacimiento y calcule su edad actual
-
-    Pasos a seguir:
-    Pedir al usuario su año de nacimiento (leerlo como string)
-    Convertir el año en un numero entero
-    Calcular la edad restando el año de nacimiento al año actual
-    Mostrar el resultado en un mensaje como: "Tienes X años"
-  
-  print("Introduce tu año de nacimiento:");
-  String date = stdin.readLineSync()!;
-  int formatDate = int.parse(date);
-  int result = (2025 - formatDate);
-  print("Tienes $result años");
-
-  /*
-  EJERCICIO 2: CALCULADORA DE PROPINA:
-  Escribe un programa en Dart que calcule cuánto debe pagar cada persona después de dividir la cuenta y agregar una propina
-
-  Pasos:
-  Pedir al usuario el total de la cuenta
-  Pedir el porcentaje de propina a agregar
-  Calcular el total a pagar sumando la propina
-  Pedir el número de personas para dividir la cuenta
-  Calcular cuánto debe pagar cada persona
-  Mostrar el resultado en pantalla
-  */
-
-  double totalCount = 29.99;
-  double tip = 20;
-  int numPeople = 2;
-
-  double priceTip = (totalCount * (tip / 100)) + totalCount;
-  String priceResult = (priceTip / numPeople).toStringAsFixed(2);
-
-  print(
-    "El precio total con propina es de: ${priceTip.toStringAsFixed(2)}, y cada uno debe pagar: $priceResult",
-  );
+  inputFunction(5, 9);
 }
 
+void simpleFunction() {
+  print("Este es un ejemplo de función simple");
+}
 
+void inputFunction(int a, int b) {
+  int result = a + b;
+  print("El resultado de la suma es: $result");
+}
+
+void greetings(String name) {
+  var age = 29;
+  var example = 42.1;
+
+  print("hola, $name.");
+}
+
+void numbersExamples() {
+  int age = 29;
+  int test = -56;
+  int large = 1234567890;
+
+  double age2 = 29.5;
+  double age3 = 29;
+  age2 = 1;
+
+  num age4 = 12;
+  num age5 = 12.1;
+  age5 = 1;
+}
+
+void stringExamples() {
+  //variables de cadena de texto
+  String name = 'MarceloGonza';
+  name = "marce";
+  String currentAge = "29 años";
+  // String fullText = name + currentAge;
+  String fullText = "Soy $name y tengo $currentAge";
+  print(fullText);
+}
+
+void dynamicExample() {
+  //Tipo dinamico
+  dynamic example = "Hola soy un ejemplo";
+  print(example);
+  example = 23;
+  print(example);
+}
+
+void condicionales() {
   int userAge = 70;
 
   if (userAge < 18) {
@@ -56,7 +63,8 @@ void main(List<String> arguments) {
     print("Eres un adulto mayor");
   }
 }
-  String ageResult = if (userAge >=18) ? print("Eres mayor de edad") : print("Eres menor de edad");
+/*
+String ageResult = if (userAge >=18) ? print("Eres mayor de edad") : print("Eres menor de edad");
 
 
 int experienceYears = 5;
@@ -118,15 +126,59 @@ int experienceYears = 5;
       break;
     default:
       print("El número ingresado no es válido");
-  }
-    */
+*/
 
+void exercise1() {
+  //EJERCICIO 1: CALCULADORA DE EDAD
+
+  //Objetivo:
+  //Escribe un programa en Dart que pida al usuario su año de nacimiento y calcule su edad actual
+
+  //Pasos a seguir:
+  //Pedir al usuario su año de nacimiento (leerlo como string)
+  //Convertir el año en un numero entero
+  //Calcular la edad restando el año de nacimiento al año actual
+  //Mostrar el resultado en un mensaje como: "Tienes X años"
+
+  print("Introduce tu año de nacimiento:");
+  String date = stdin.readLineSync()!;
+  int formatDate = int.parse(date);
+  int result = (2025 - formatDate);
+  print("Tienes $result años");
+}
+
+void exercise2() {
+  /*
+  EJERCICIO 2: CALCULADORA DE PROPINA:
+  Escribe un programa en Dart que calcule cuánto debe pagar cada persona después de dividir la cuenta y agregar una propina
+
+  Pasos:
+  Pedir al usuario el total de la cuenta
+  Pedir el porcentaje de propina a agregar
+  Calcular el total a pagar sumando la propina
+  Pedir el número de personas para dividir la cuenta
+  Calcular cuánto debe pagar cada persona
+  Mostrar el resultado en pantalla
+  */
+
+  double totalCount = 29.99;
+  double tip = 20;
+  int numPeople = 2;
+
+  double priceTip = (totalCount * (tip / 100)) + totalCount;
+  String priceResult = (priceTip / numPeople).toStringAsFixed(2);
+
+  print(
+    "El precio total con propina es de: ${priceTip.toStringAsFixed(2)}, y cada uno debe pagar: $priceResult",
+  );
+}
+
+void exercise3() {
   //EJERCICIO 3: Identificar números positivos y negativos
   //Objetivo:Objetivo
   //Escribe un programa en Dart que determine si un número ingresado por el usuariuo es positivo,
   //negativo o 0.
 
-  /*
   print("Introduce un número:");
   int number = int.parse(stdin.readLineSync()!);
 
@@ -139,12 +191,13 @@ int experienceYears = 5;
   } else {
     print("El número ingresado no es válido");
   }
-  */
+}
 
+void exercise4() {
   //EJERCICIO 4: MESES DEL AÑO
   //Objetivo:
   //Escribe un programa en Dart que recuba un número entre 1 y 12 y muestre el nombre del mes correspondiente del año.
-  print("Intrpduce un número de 1 al 12 para saber el mes correspondiente:");
+  print("Introduce un número de 1 al 12 para saber el mes correspondiente:");
   int monthNumber = int.parse(stdin.readLineSync()!);
 
   switch (monthNumber) {
