@@ -3,7 +3,8 @@ import 'dart:io';
 void main(List<String> arguments) {
   //inputFunction(5, 9);
   //print("El resltado es ${outputFunction()}");
-  optionalFunction2("Marcelo", 29);
+  //optionalFunction2("Marcelo", 29);
+  listExamples();
 }
 
 void simpleFunction() {
@@ -58,6 +59,24 @@ void numbersExamples() {
   num age4 = 12;
   num age5 = 12.1;
   age5 = 1;
+}
+
+//ESTRUCTURAS DE DATOS
+//LISTAS
+
+void listExamples() {
+  List<String> names = ["Marcelo", "Pepe", "Juan"];
+  var names2 = ["Ernesto", "Pepe", "Ana"];
+  //print(names[0])
+  //print(names.last); // Imprime el último elemento de la lista
+  //print(names.length); // Imprime la cantidad de elementos de la lista
+  //names.add("Marce"); // Agrega un elemento al final de la lista
+  //names[2] = "Francisco"; // Modifica el elemento en la posición 2 de la lista
+  //print(names[names.length - 1]); // Imprime el último elemento de la lista
+  //names.remove("Pepe"); // Elimina el elemento "Pepe" de la lista
+  //names.removeAt(0); // Elimina el elemento en la posición 0 de
+  names.addAll(names2); // Agrega todos los elementos de names2 a names
+  print(names);
 }
 
 void stringExamples() {
