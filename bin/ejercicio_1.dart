@@ -1,7 +1,9 @@
 import 'dart:io';
 
 void main(List<String> arguments) {
-  inputFunction(5, 9);
+  //inputFunction(5, 9);
+  //print("El resltado es ${outputFunction()}");
+  optionalFunction2("Marcelo", 29);
 }
 
 void simpleFunction() {
@@ -12,6 +14,30 @@ void inputFunction(int a, int b) {
   int result = a + b;
   print("El resultado de la suma es: $result");
 }
+
+void outputFunction() {
+  int a = 5;
+  int b = 9;
+  int result = a + b;
+  print("El resultado de la suma es: $result");
+  //return result; // Esta función no debería retornar nada, pero se muestra como ejemplo
+}
+
+void optionalFunction({String name = "Desconocido", int age = -1}) {
+  print("Eres $name y tiene $age años");
+}
+
+void optionalFunction2(String name, [int age = -1]) {
+  print("Eres $name y tienes $age");
+}
+
+int completeFunction(int a, int b) {
+  return a + b;
+}
+
+int completeFunction2(int a, int b) =>
+    a +
+    b; // Esta es una función de flecha, que es una forma más concisa de escribir funciones en Dart
 
 void greetings(String name) {
   var age = 29;
