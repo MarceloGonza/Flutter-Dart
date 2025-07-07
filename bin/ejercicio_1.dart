@@ -4,7 +4,7 @@ void main(List<String> arguments) {
   //inputFunction(5, 9);
   //print("El resltado es ${outputFunction()}");
   //optionalFunction2("Marcelo", 29);
-  listExamples();
+  setExamples();
 }
 
 void simpleFunction() {
@@ -75,8 +75,54 @@ void listExamples() {
   //print(names[names.length - 1]); // Imprime el último elemento de la lista
   //names.remove("Pepe"); // Elimina el elemento "Pepe" de la lista
   //names.removeAt(0); // Elimina el elemento en la posición 0 de
+  //name.clear(); //Elimina todos los elementos de la lista
+  //names.insert(1, "Ramon"); //Inserta un elemento en la posición 1 de la lista
   names.addAll(names2); // Agrega todos los elementos de names2 a names
   print(names);
+}
+
+void setExamples() {
+  Set<String> names = {"Marcelo", "Alberto"};
+  Set<String> namesDos = {"Marcelo", "Alberto"};
+  names.add("Marcelo"); //no la duplica si ya existe
+  names.add("Rusbell");
+  names.remove("marcelo"); //como no hay posiciones se le pasa el valor
+  names.clear();
+  names.removeAll(namesDos); //Elimina todo
+  //print(names.length) longitud
+  //names.contains("Marcelo"); //le pasamos un valor para comprobar si existe, devuelve boolean
+  bool result = names.contains("Marcelo");
+  if (result) {
+    // o if(names.contains("Marcelo")) seria lo mismo
+    print("El nombre Marcelo está en la lista");
+  } else {
+    print("Marcelo no está en la lista");
+  } // Podemos almacenar en variable y preguntar si existe
+  print(names);
+
+  //Con el set puedes quitar los valores duplicados
+  List<String> newNames = ["Macelo", "Marcelo", "Juan"];
+  Set<String> newNamesSet = Set.from(newNames);
+  print(newNamesSet);
+}
+
+//MAP
+
+void mapExamples() {
+  Map<String, int> people = {"Marcelo": 29, "Juan": 60, "Mirta": 120};
+
+  //people["Marcelo"] = 10;//modificar el valor
+  //people.addAll({"Daavid":44, "Miguel: 65"}); Agregar valores al Map
+  //people["Pikachu"] = 12 Agregar un solo valor
+  //people.remove("Pikachu");
+  //print(people["Juan"]) Para acceder a los valores
+
+  //print(people.keys) Devuelve todas las keys
+  //print(people.values) Devuelve todos los valores
+  //people.containsKey("Marcelo"); Comprobar si existe
+  //people.containsValue("32");
+  //people.length;
+  //people.clear;
 }
 
 void stringExamples() {
