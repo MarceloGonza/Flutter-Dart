@@ -154,6 +154,46 @@ void condicionales() {
     print("Eres un adulto mayor");
   }
 }
+
+//BUCLES
+void listLoop() {
+  List<int> numbers = [2, 4, 6, 8, 9, 5];
+
+  for (var i = 0; i < numbers.length; i++) {
+    //Este nos da la posicion
+    print("Con el for básico tenemos: ${numbers[i]}");
+  }
+
+  for (var element in numbers) {
+    print("Con el segundo for tengo $element");
+  }
+
+  //numbers.forEach((item){ con el forEach podemos recorrer la lista de igual manera
+  //  print("El numero es $item");
+  //});
+}
+
+void setLoop() {
+  Set<int> numbers = [3, 4, 6, 8, 5];
+  for (var element in numbers) {
+    print("El Set tiene: $element");
+  }
+}
+
+void mapLoop() {
+  Map<String, int> numbers = {"favNumber": 35, "birthday": 12, "addres": 4};
+
+  for (var element in numbers.entries) {
+    print(
+      "La clave es 4{element.key} y el valor es ${element.value}",
+    ); //da las claves y el valor
+  }
+
+  numbers.forEach((key, value) {
+    print("La clave es $key y el valor es $value"); //key y value para map
+  });
+}
+
 /*
 String ageResult = if (userAge >=18) ? print("Eres mayor de edad") : print("Eres menor de edad");
 
